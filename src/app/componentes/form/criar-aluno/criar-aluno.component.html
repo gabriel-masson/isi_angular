@@ -1,0 +1,20 @@
+<main>
+    <form id="create-form">
+      <div class="sessao-conteudo">
+        <label for="name">Nome:</label>
+        <input type="text" id="nome" name="name" [(ngModel)] = "aluno.name">
+
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" name="idade" [(ngModel)] = "aluno.idade">
+
+        <label for="titulo">titulo(Graduação,Mestrado ou Doutor):</label>
+        <input type="text" id="titulo" name="titulo" [(ngModel)] = "aluno.titulo">
+
+        <label for="linha_de_pesquisa">linha de pesquisa:</label>
+        <input type="text" id="linha_de_pesquisa" name="linha_de_pesquisa" [(ngModel)] = "aluno.linha_de_pesquisa">
+
+        <button type="submit" (click)="createAluno()">Criar</button>
+      </div>
+
+    </form>
+  </main>
