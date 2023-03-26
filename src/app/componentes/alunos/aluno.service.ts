@@ -1,4 +1,4 @@
-/*import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 @Injectable({
@@ -13,8 +13,22 @@ export class AlunoService {
   listar(): Observable<any []> {
     return this.http.get<any []>(this.URL)
   }
+  // criar(aluno: Aluno): Observable<Aluno> {
+  //   return this.http.post<Aluno>(this.URL, aluno);
+  // }
 
-}*/
+  // atualizar(aluno: Aluno): Observable<Aluno> {
+  //   const url = `${this.URL}/${aluno.id}`;
+  //   return this.http.put<Aluno>(url, aluno);
+  // }
+
+  excluir(id: string): Observable<any> {
+    const url = `${this.URL}/${id}`;
+    return this.http.delete(url);
+  }
+
+}
+/*
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -46,3 +60,4 @@ export class AlunoService {
     return this.http.delete(url);
   }
 }
+*/

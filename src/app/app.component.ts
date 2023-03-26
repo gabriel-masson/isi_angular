@@ -8,15 +8,24 @@ import { AlunoService } from './componentes/alunos/aluno.service';
 })
 export class AppComponent implements OnInit {
   title = 'isiFront';
-  alunos: any[] = []
+  alunos: any[] = [];
 
   constructor(private service: AlunoService) { }
 
   ngOnInit(): void {
     this.service.listar().subscribe((alunos) => {
-      this.alunos = alunos
-  });
+      this.alunos = alunos;
+    });
+  }
 
+  delete(aluno: any){
+    this.service.excluir(aluno.name).subscribe();
+    this.recarregarPagina();
+  }
+
+  //use esse metodo todas as vezes que vc tenha mostrar os dados atualizados
+  recarregarPagina() {
+    window.location.reload();
   }
 
 
