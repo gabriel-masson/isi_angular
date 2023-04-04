@@ -1,14 +1,17 @@
-
-
 <app-cabecalho></app-cabecalho>
 <app-criar-aluno></app-criar-aluno>
 
-  <div class="container">
-    <h2>Itens existentes:</h2>
-    <ul id="item-list" *ngFor="let aluno of alunos">
-      
-        <li><strong>{{ aluno.titulo }} {{ aluno.nome }} </strong> idade: {{ aluno.idade }} linha de pesquisa: {{ aluno.linha_de_pesquisa }} <button name={{aluno.uuid}} class="btn-remove" (click) = "delete($event.target)">Excluir</button></li>
-    </ul>
+<div class="container">
+  <h2>Itens existentes:</h2>
+  <ul id="item-list" *ngFor="let aluno of alunos">
 
-  </div>
+    <li>
+      <strong>{{ aluno.titulo }} {{ aluno.nome }} </strong>
+      idade: {{ aluno.idade }}
+      linha de pesquisa: {{ aluno.linha_de_pesquisa }}
+      <button name={{aluno.uuid}} class="btn-remove" (click)="delete($event.target)">Excluir</button>
+    </li>
+  </ul>
+  <!-- modal -form -->
+</div>
 <router-outlet></router-outlet>

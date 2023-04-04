@@ -15,7 +15,7 @@ export class CriarAlunoComponent implements OnInit {
   ngOnInit(): void {
     //criando a estrura de dados que o formulario deve conter
     this.formulario = this.formBuilder.group({
-      name: [''],
+      nome: [''],
       idade: [''],
       titulo: [''],
       linha_de_pesquisa: ['']
